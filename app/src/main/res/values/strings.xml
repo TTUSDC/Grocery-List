@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Grocery List</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_newItem">Enter a new item</string>
+    <string name="button_add">Add</string>
+</resources>
