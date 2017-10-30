@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class GroceryModel {
 
     // instance of our GroceryModel object
-    private static GroceryModel instance;
+    private static final GroceryModel instance = new GroceryModel();
     // mock database to hold grocery list items
     private ArrayList<String> groceryList = new ArrayList<String>();
 
@@ -17,13 +17,11 @@ public class GroceryModel {
     private GroceryModel() {}
 
     /*
-    public method to get an instance of Grocery model.
-    if one is already created, get that one, else, create a new one
+    public method to get an instance of GroceryModel.
+    the *synchronized* part assures that only one thread is
+    using this method at any time
      */
     public static synchronized GroceryModel getInstance() {
-        if (instance == null) {  // check if GroceryModel has already been instantiated
-            instance = new GroceryModel();  // instantiate new
-        }
         return instance;  // return instance
     }
 

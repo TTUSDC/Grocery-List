@@ -7,7 +7,6 @@ package com.example.grocerylist.AddItem;
 public interface AddItemInterface {
 
     interface View {
-        void exit();
     }
 
     interface Presenter {

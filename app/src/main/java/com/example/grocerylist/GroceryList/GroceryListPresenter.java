@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 public class GroceryListPresenter implements GroceryListInterface.Presenter {
 
-    private Context appContext;
-    private GroceryModel groceryModel;
-    private GroceryListInterface.View groceryView;
+    private Context appContext; // the application context
+    private GroceryModel groceryModel;  // our GroceryModel object
+    private GroceryListInterface.View groceryView; // a connection to the View
 
     public GroceryListPresenter(Context context, GroceryListInterface.View view) {
         // Get an instance of our mock database

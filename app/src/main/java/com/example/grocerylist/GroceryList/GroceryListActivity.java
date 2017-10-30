@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class GroceryListActivity extends AppCompatActivity implements GroceryListInterface.View{
 
-    ListView groceryListView;
-    GroceryListPresenter presenter;
+    ListView groceryListView;  // connection to listview
+    GroceryListPresenter presenter; // presenter object
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,7 @@ public class GroceryListActivity extends AppCompatActivity implements GroceryLis
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // display "Item Added" at bottom of screen
-                Snackbar.make(view, "Item Added!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // Start the add item activity
                 presenter.startAddItemActivity();
             }
         });
@@ -44,7 +42,6 @@ public class GroceryListActivity extends AppCompatActivity implements GroceryLis
         // get a presenter object to handle logic
         presenter = new GroceryListPresenter(this, this);
     }
-
 
     @Override
     protected void onResume() {
@@ -59,21 +56,6 @@ public class GroceryListActivity extends AppCompatActivity implements GroceryLis
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

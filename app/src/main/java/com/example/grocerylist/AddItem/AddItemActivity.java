@@ -18,7 +18,7 @@ public class AddItemActivity extends AppCompatActivity implements AddItemInterfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
         newItemEditText = (EditText) findViewById(R.id.newItemEditText);
-        presenter = new AddItemPresenter(this, this);
+        presenter = new AddItemPresenter();
     }
 
     /* OnClick() for when the user clicks Add button */
@@ -27,11 +27,6 @@ public class AddItemActivity extends AppCompatActivity implements AddItemInterfa
         String item = newItemEditText.getText().toString();
         // Tell presenter to add the item
         presenter.addItem(item);
-        this.finish();
-    }
-
-    @Override
-    public void exit() {
         this.finish();
     }
 }

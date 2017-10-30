@@ -9,12 +9,15 @@ import java.util.ArrayList;
 public interface GroceryListInterface {
 
     interface View {
+        // the view's method that shows a grocery list
         void showGroceryList(ArrayList<String> groceryList);
     }
 
 
     interface Presenter {
+        // the presenter's method that update's the view's on-screen list
         void updateGroceryList();
+        // the presenter's method that starts the AddItemActivity
         void startAddItemActivity();
     }
 }
