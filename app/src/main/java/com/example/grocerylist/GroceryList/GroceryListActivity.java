@@ -15,10 +15,10 @@ import com.example.grocerylist.R;
 
 import java.util.ArrayList;
 
-public class GroceryListActivity extends AppCompatActivity implements GroceryInterface.View{
+public class GroceryListActivity extends AppCompatActivity implements GroceryListInterface.View{
 
     ListView groceryListView;
-    GroceryPresenter presenter;
+    GroceryListPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class GroceryListActivity extends AppCompatActivity implements GroceryInt
         // get a connection to our ListView
         groceryListView = (ListView) findViewById(R.id.list_grocery);
         // get a presenter object to handle logic
-        presenter = new GroceryPresenter(this, this);
+        presenter = new GroceryListPresenter(this, this);
     }
 
 

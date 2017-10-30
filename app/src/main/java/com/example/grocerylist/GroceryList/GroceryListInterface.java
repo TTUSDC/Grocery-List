@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by dlowrey on 10/23/2017.
  */
 
-public interface GroceryInterface {
+public interface GroceryListInterface {
 
     interface View {
         void showGroceryList(ArrayList<String> groceryList);

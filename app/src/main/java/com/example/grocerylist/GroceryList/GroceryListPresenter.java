@@ -12,16 +12,16 @@ import java.util.ArrayList;
  * Created by dlowrey on 10/23/2017.
  */
 
-public class GroceryPresenter implements GroceryInterface.Presenter {
+public class GroceryListPresenter implements GroceryListInterface.Presenter {
 
     private Context appContext;
     private GroceryModel groceryModel;
-    private GroceryInterface.View groceryView;
+    private GroceryListInterface.View groceryView;
 
-    public GroceryPresenter(Context context, GroceryInterface.View view) {
+    public GroceryListPresenter(Context context, GroceryListInterface.View view) {
         // Get an instance of our mock database
         groceryModel = GroceryModel.getInstance();
-        // Get a GroceryInterface.View connection so we can call those functions
+        // Get a GroceryListInterface.View connection so we can call those functions
         groceryView = view;
         // Get the application context
         appContext = context;
